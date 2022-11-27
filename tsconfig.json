@@ -5,7 +5,10 @@
     "outDir": "dist",
     "strict": true,
     "skipDefaultLibCheck": true,
-    "esModuleInterop": true,                       
-    "forceConsistentCasingInFileNames": true
-  }
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "types": ["jest", "node", "express"]
+  },
+  "include": ["src/**/*", "tests/**/*", "**/*.spec.ts",
+  "**/*.test.ts"]
 }

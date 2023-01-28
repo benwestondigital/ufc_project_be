@@ -7,7 +7,8 @@
     "skipDefaultLibCheck": true,
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
-    "types": ["jest", "node", "express"]
+    "types": ["jest", "node", "express"],
+    "resolveJsonModule": true
   },
   "include": ["src/**/*", "tests/**/*", "**/*.spec.ts",
   "**/*.test.ts"]

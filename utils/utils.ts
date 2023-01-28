@@ -1,10 +1,11 @@
 import * as fs from 'fs';
+const path = require('path');
 import { fetchEventData } from '../src/fetchEventData/fetchEventData';
 
-export const writeToFile = async (data: any, filePath: string = 'data.json'): Promise<void> => {
+export const writeToJsonFile = async (data: any, filePath: string = 'data'): Promise<void> => {
   try {
     if (!data) return;
-    await fs.promises.writeFile(filePath, JSON.stringify(data), 'utf-8');
+    await fs.promises.writeFile(`../../data/${filePath}.json`, JSON.stringify(data), 'utf-8');
   } catch (err) {
     console.log(err);
   }
@@ -13,7 +14,7 @@ export const writeToFile = async (data: any, filePath: string = 'data.json'): Pr
 export const fetchAndWrite = async (): Promise<void> => {
   try {
     const LiveEventDetails = await fetchEventData();
-    await writeToFile(LiveEventDetails);
+    await writeToJsonFile(LiveEventDetails);
   } catch (err) {
     console.log(err);
   }

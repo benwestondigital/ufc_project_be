@@ -17,4 +17,4 @@ export const fetchEventData = async (eventNum = 1114): Promise<LiveEventData> =>
   }
 };
 
-fetchAndWrite();
+// fetchAndWrite();

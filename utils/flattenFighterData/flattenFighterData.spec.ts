@@ -1,16 +1,16 @@
-import { transformFighterData } from './transformFighterData';
-import { data } from './transformFighterData.testdata';
+import { flattenFighterData } from './flattenFighterData';
+import { data } from './flattenFighterData.testdata';
 
 describe('transformFighterData', () => {
   it('should return an empty array when called with an empty object', () => {
     const data = {} as any;
-    const result = transformFighterData(data);
+    const result = flattenFighterData(data);
     expect(result).toEqual([]);
   });
 });
 
 it('should return an array of flattened fighter data when called with valid data', () => {
-  const actual = transformFighterData(data);
+  const actual = flattenFighterData(data);
   const expected = [
     [
       'Israel Adesanya',

@@ -39,7 +39,3 @@ export const transformFighterData = ({
   });
   return transformedFighterData;
 };
-
-const fighterData = transformFighterData(data);
-
-writeToJsonFile(fighterData, 'fighters');
